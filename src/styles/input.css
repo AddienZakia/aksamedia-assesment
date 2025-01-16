@@ -10,5 +10,5 @@
 
 th,
 td {
-  @apply border py-2 font-normal truncate px-4 md:px-0;
+  @apply border py-2 font-normal truncate px-4 md:px-0 dark:border-darkMode-hover;
 }

@@ -56,7 +56,7 @@ function Detail() {
       </Link>
 
       <section className="flex items-center justify-center">
-        <div className="relative z-20 w-[90%] md:w-[70%] lg:w-[60%] 2xl:w-[40%] bg-white rounded-2xl p-6 md:py-8 space-y-4">
+        <div className="relative z-20 w-[90%] md:w-[70%] lg:w-[60%] 2xl:w-[40%] bg-white rounded-2xl p-6 md:py-8 space-y-4 dark:bg-darkMode-surface">
           <h1 className="text-3xl font-bold text-center">Detail Produk</h1>
 
           <form onSubmit={handleSubmit}>
@@ -69,7 +69,10 @@ function Detail() {
                   type="text"
                   id="product"
                   name="product"
-                  className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium"
+                  className={twMerge(
+                    "w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium dark:bg-darkMode-hover",
+                    isEdit && "dark:text-white"
+                  )}
                   defaultValue={dataUser.product}
                   onChange={onValueChange}
                   disabled={!isEdit}
@@ -86,7 +89,10 @@ function Detail() {
                   id="description"
                   name="description"
                   placeholder="Masukkan deskripsi produk"
-                  className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium"
+                  className={twMerge(
+                    "w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium dark:bg-darkMode-hover",
+                    isEdit && "dark:text-white"
+                  )}
                   defaultValue={dataUser.description}
                   onChange={onValueChange}
                   disabled={!isEdit}
@@ -98,11 +104,14 @@ function Detail() {
                 <p className="font-medium">
                   Kategori<span className="text-red-500">*</span>
                 </p>
-                <div className="relative flex items-center w-full pr-3 text-base font-medium text-gray-400 truncate shadow-sm bg-slate-100 rounded-xl">
+                <div className="relative flex items-center w-full pr-3 text-base font-medium text-gray-400 truncate shadow-sm bg-slate-100 rounded-xl dark:bg-darkMode-hover">
                   <select
                     name="category"
                     id="category"
-                    className="w-full p-3 px-4 text-black cursor-pointer bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium"
+                    className={twMerge(
+                      "w-full p-3 px-4 text-black cursor-pointer dark:text-darkMode-typo bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium dark:bg-darkMode-hover",
+                      isEdit && "dark:text-white"
+                    )}
                     onChange={onValueChange}
                     value={dataUser.category}
                     disabled={!isEdit}
@@ -125,7 +134,10 @@ function Detail() {
                   type="number"
                   id="stock"
                   name="stock"
-                  className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium"
+                  className={twMerge(
+                    "w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium dark:bg-darkMode-hover",
+                    isEdit && "dark:text-white"
+                  )}
                   defaultValue={dataUser.stock}
                   onChange={onValueChange}
                   disabled={!isEdit}
@@ -139,7 +151,10 @@ function Detail() {
                   type="number"
                   id="discount"
                   name="discount"
-                  className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium"
+                  className={twMerge(
+                    "w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium dark:bg-darkMode-hover",
+                    isEdit && "dark:text-white"
+                  )}
                   defaultValue={dataUser.discount}
                   onChange={onValueChange}
                   disabled={!isEdit}
@@ -155,7 +170,10 @@ function Detail() {
                   type="number"
                   id="price"
                   name="price"
-                  className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium"
+                  className={twMerge(
+                    "w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium dark:bg-darkMode-hover",
+                    isEdit && "dark:text-white"
+                  )}
                   defaultValue={dataUser.price}
                   onChange={onValueChange}
                   disabled={!isEdit}
@@ -169,7 +187,10 @@ function Detail() {
                   type="text"
                   id="supplier"
                   name="supplier"
-                  className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium"
+                  className={twMerge(
+                    "w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium dark:bg-darkMode-hover",
+                    isEdit && "dark:text-white"
+                  )}
                   defaultValue={dataUser.supplier || "-"}
                   onChange={onValueChange}
                   disabled={!isEdit}
@@ -183,7 +204,10 @@ function Detail() {
                   type="text"
                   id="manufacturer"
                   name="manufacturer"
-                  className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium"
+                  className={twMerge(
+                    "w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium dark:bg-darkMode-hover",
+                    isEdit && "dark:text-white"
+                  )}
                   defaultValue={dataUser.manufacturer || "-"}
                   onChange={onValueChange}
                   disabled={!isEdit}
@@ -199,7 +223,10 @@ function Detail() {
                   type="text"
                   id="tags"
                   name="tags"
-                  className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium"
+                  className={twMerge(
+                    "w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium dark:bg-darkMode-hover",
+                    isEdit && "dark:text-white"
+                  )}
                   defaultValue={(dataUser.tags ?? []).join(", ")}
                   onChange={onValueChange}
                   disabled={!isEdit}
@@ -212,13 +239,13 @@ function Detail() {
             </div>
           </form>
 
-          <div className="flex gap-3 pt-5">
+          <div className="grid grid-cols-2 gap-3 pt-5">
             <button
               type="button"
               className={twMerge(
                 "w-full p-2 text-center transition-all duration-200 bg-red-500 rounded-md text-lightBlue hover:bg-red-700",
                 isEdit &&
-                  "bg-orange-500 rounded-md text-lightBlue hover:bg-orange-700 flex-1"
+                  "bg-orange-500 rounded-md text-lightBlue hover:bg-orange-700 flex-1 w-full"
               )}
               onClick={() => {
                 if (isEdit) setIsEdit(false);

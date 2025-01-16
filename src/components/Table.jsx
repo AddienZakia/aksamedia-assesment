@@ -8,7 +8,7 @@ export default function Table({ DataProducts, currentPage }) {
     <div className="overflow-x-auto border-collapse xl:overflow-hidden rounded-xl">
       <table className="w-full border">
         {/* Table Head */}
-        <tr className="text-white bg-darkBlue-main">
+        <tr className="text-white bg-darkBlue-main dark:bg-darkBlue-hover">
           <th className="font-semibold">No</th>
           <th className="font-semibold">Nama Produk</th>
           <th className="font-semibold">Kategori</th>
@@ -20,7 +20,7 @@ export default function Table({ DataProducts, currentPage }) {
 
         {/* Table Body */}
         {DataProducts.length === 0 && (
-          <tr className="text-center bg-white">
+          <tr className="text-center bg-white dark:bg-darkMode-surface">
             <td colSpan={7}>Tidak ada data tersedia</td>
           </tr>
         )}
@@ -34,7 +34,10 @@ export default function Table({ DataProducts, currentPage }) {
           };
 
           return (
-            <tr className="text-center text-black bg-white" key={data.id}>
+            <tr
+              className="text-center text-black bg-white dark:bg-darkMode-surface dark:text-darkMode-typo"
+              key={data.id}
+            >
               <td>{(currentPage - 1) * 10 + i + 1}</td>
               <td>{data.product}</td>
               <td>
@@ -55,7 +58,8 @@ export default function Table({ DataProducts, currentPage }) {
                   <div
                     className={twMerge(
                       "p-2 mx-auto text-gray-500 border border-gray-500 rounded-md w-fit hover:bg-black/5",
-                      "transition-all duration-200 cursor-pointer"
+                      "transition-all duration-200 cursor-pointer",
+                      "dark:hover:bg-darkBlue-hover dark:text-white dark:border-white"
                     )}
                   >
                     Lihat Details

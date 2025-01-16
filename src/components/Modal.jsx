@@ -15,7 +15,7 @@ export default function Modal({ setOpen, open, children, className }) {
 
         <div
           className={twMerge(
-            "relative z-30 w-[90%] md:w-[70%] lg:w-[60%] 2xl:w-[40%] bg-white rounded-2xl p-6 md:py-8 space-y-4",
+            "relative z-30 w-[90%] md:w-[70%] lg:w-[60%] 2xl:w-[40%] bg-white dark:bg-darkMode-main rounded-2xl p-6 md:py-8 space-y-4",
             className
           )}
         >

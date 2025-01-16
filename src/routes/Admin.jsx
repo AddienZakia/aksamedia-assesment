@@ -79,7 +79,9 @@ function Admin() {
   return (
     <DashboardLayout>
       <div className="flex flex-col gap-2 mt-3 md:items-center md:justify-between md:flex-row">
-        <h1 className="text-3xl font-semibold ">Data Produk</h1>
+        <h1 className="text-3xl font-semibold dark:text-darkBlue-main">
+          Data Produk
+        </h1>
 
         <button
           className={twMerge(
@@ -103,17 +105,17 @@ function Admin() {
             id="search"
             name="search"
             placeholder="Cari.."
-            className="w-full p-3 px-6 text-base truncate bg-white shadow-sm md:w-fit rounded-xl"
+            className="w-full p-3 px-6 text-base truncate bg-white shadow-sm dark:bg-darkMode-surface md:w-fit rounded-xl"
             onChange={onSearchChange}
             value={pageNuqs.search}
           />
 
           <div className="flex w-full gap-3 md:w-fit">
-            <div className="relative flex items-center w-full pr-3 text-base font-medium text-gray-400 truncate bg-white shadow-sm md:w-fit rounded-xl">
+            <div className="relative flex items-center w-full pr-3 text-base font-medium text-gray-400 truncate bg-white shadow-sm dark:bg-darkMode-surface md:w-fit rounded-xl">
               <select
                 id="filter"
                 name="filter"
-                className="w-full p-3 px-3 cursor-pointer md:w-fit"
+                className="w-full p-3 px-3 cursor-pointer md:w-fit dark:bg-darkMode-surface "
                 onChange={(e) => setFilterType(e.target.value)}
                 value={filterType}
               >

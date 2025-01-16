@@ -63,7 +63,7 @@ export default function ModalAddProduct({
               id="product"
               name="product"
               placeholder="Masukkan nama produk"
-              className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium"
+              className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium dark:bg-darkMode-surface"
               onChange={onValueChange}
               required
             />
@@ -78,7 +78,7 @@ export default function ModalAddProduct({
               id="description"
               name="description"
               placeholder="Masukkan deskripsi produk"
-              className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium"
+              className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium dark:bg-darkMode-surface"
               onChange={onValueChange}
               required
             />
@@ -88,11 +88,11 @@ export default function ModalAddProduct({
             <p className="font-medium">
               Kategori<span className="text-red-500">*</span>
             </p>
-            <div className="relative flex items-center w-full pr-3 text-base font-medium text-gray-400 truncate shadow-sm bg-slate-100 rounded-xl">
+            <div className="relative flex items-center w-full pr-3 text-base font-medium text-gray-400 truncate shadow-sm bg-slate-100 rounded-xl dark:bg-darkMode-surface">
               <select
                 name="category"
                 id="category"
-                className="w-full p-3 px-4 cursor-pointer bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium"
+                className="w-full p-3 px-4 cursor-pointer bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium dark:bg-darkMode-surface"
                 onChange={onValueChange}
                 required
               >
@@ -114,7 +114,7 @@ export default function ModalAddProduct({
               id="stock"
               name="stock"
               placeholder="Masukkan jumlah stok produk"
-              className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium"
+              className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium dark:bg-darkMode-surface"
               onChange={onValueChange}
               required
             />
@@ -127,7 +127,7 @@ export default function ModalAddProduct({
               id="discount"
               name="discount"
               placeholder="Masukkan diskon produk"
-              className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium"
+              className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium dark:bg-darkMode-surface"
               onChange={onValueChange}
               required={false}
             />
@@ -142,7 +142,7 @@ export default function ModalAddProduct({
               id="price"
               name="price"
               placeholder="Masukkan harga produk"
-              className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium"
+              className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium dark:bg-darkMode-surface"
               onChange={onValueChange}
               required
             />
@@ -155,7 +155,7 @@ export default function ModalAddProduct({
               id="supplier"
               name="supplier"
               placeholder="Masukkan supplier produk"
-              className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium"
+              className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium dark:bg-darkMode-surface"
               onChange={onValueChange}
               required={false}
             />
@@ -168,7 +168,7 @@ export default function ModalAddProduct({
               id="manufacturer"
               name="manufacturer"
               placeholder="Masukkan pabrik produk"
-              className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium"
+              className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium dark:bg-darkMode-surface"
               onChange={onValueChange}
               required={false}
             />
@@ -183,7 +183,7 @@ export default function ModalAddProduct({
               id="tags"
               name="tags"
               placeholder="Masukkan tags produk"
-              className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium"
+              className="w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium dark:bg-darkMode-surface"
               onChange={onValueChange}
               required
             />
@@ -195,7 +195,7 @@ export default function ModalAddProduct({
 
         <button
           type="submit"
-          className="w-full p-2 mt-5 text-center transition-opacity duration-200 rounded-md bg-darkBlue-main text-lightBlue hover:bg-darkBlue-hover"
+          className="w-full p-2 mt-5 text-center transition-all duration-200 rounded-md bg-darkBlue-main text-lightBlue hover:bg-darkBlue-hover"
         >
           Tambah produk
         </button>
