@@ -164,6 +164,25 @@ function Detail() {
 
               <div className="space-y-1">
                 <p className="font-medium">
+                  Penjualan<span className="text-red-500">*</span>
+                </p>
+                <input
+                  type="number"
+                  id="price"
+                  name="price"
+                  className={twMerge(
+                    "w-full p-3 text-base truncate rounded-md bg-slate-100 disabled:text-gray-400 disabled:cursor-not-allowed disabled:font-medium dark:bg-darkMode-hover",
+                    isEdit && "dark:text-white"
+                  )}
+                  defaultValue={dataUser.sales}
+                  onChange={onValueChange}
+                  disabled={!isEdit}
+                  required
+                />
+              </div>
+
+              <div className="space-y-1 md:col-span-2">
+                <p className="font-medium">
                   Harga<span className="text-red-500">*</span>
                 </p>
                 <input
